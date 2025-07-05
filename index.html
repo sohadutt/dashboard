@@ -1,12 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <nav>
+        <ul>
+          <li><span class="material-icons">home</span> Home</li>
+          <li><span class="material-icons">person</span> Profile</li>
+          <li><span class="material-icons">message</span> Messages</li>
+          <li><span class="material-icons">history</span> History</li>
+          <li><span class="material-icons">task</span> Tasks</li>
+          <li><span class="material-icons">groups</span> Communities</li>
+          <li><span class="material-icons">settings</span> Settings</li>
+          <li><span class="material-icons">help</span> Support</li>
+          <li><span class="material-icons">shield</span> Privacy</li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="main">
+      <header class="top-nav">
+        <input type="text" placeholder="Search..." />
+        <div class="user-profile">
+          <span class="material-icons">notifications</span>
+          <span class="user-name">Morgan Oakley</span>
+          <img src="https://api.dicebear.com/6.x/thumbs/svg?seed=Morgan" alt="avatar">
+        </div>
+      </header>
+      <div class="actions">
+        <h2>Hi there, <strong>Morgan Oakley (@morgan)</strong></h2>
+        <div class="action-buttons">
+          <button>New</button>
+          <button>Upload</button>
+          <button>Share</button>
+        </div>
+      </div>
+      <div class="content-grid">
+        <div class="projects">
+          <h3>Your Projects</h3>
+          <div class="cards">
+            <div class="card"><h4>Super Cool Project</h4><p>Sed tempus et lacus ut scelerisque...</p></div>
+            <div class="card"><h4>Less Cool Project</h4><p>Nullam condimentum ipsum ut lectus...</p></div>
+            <div class="card"><h4>Impossible App</h4><p>In hac habitasse platea dictumst...</p></div>
+            <div class="card"><h4>Easy Peasy App</h4><p>Etiam cursus eros ac efficitur fringilla...</p></div>
+            <div class="card"><h4>Ad Blocker</h4><p>Quisque eget rutrum nisl...</p></div>
+            <div class="card"><h4>Money Maker</h4><p>Praesent convallis, libero quis congue elementum...</p></div>
+          </div>
+        </div>
+        <aside class="sidebar-widgets">
+          <div class="widget">
+            <h4>Announcements</h4>
+            <ul>
+              <li><strong>Site Maintenance</strong><br> Vestibulum condimentum...</li>
+              <li><strong>Community Share Day</strong><br> Nam vel lectus tincidunt...</li>
+              <li><strong>Updated Privacy Policy</strong><br> Phasellus efficitur nisi...</li>
+            </ul>
+          </div>
+          <div class="widget">
+            <h4>Trending</h4>
+            <ul>
+              <li>@tegan - World Peace Builder</li>
+              <li>@morgan - Super Cool Project</li>
+              <li>@kendall - Life Changing App</li>
+              <li>@alex - No Traffic Maker</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
