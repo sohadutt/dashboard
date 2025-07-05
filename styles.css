@@ -8,45 +8,61 @@
 body {
   background: #f3f6fc;
   color: #333;
+  min-height: 100vh;
+  display: flex;
 }
 
 .dashboard {
   display: flex;
+  width: 100%;
 }
 
 .sidebar {
   width: 240px;
-  background-color: #2196f3;
+  background-color: #1976d2;
   color: white;
-  padding: 20px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
 .sidebar h2 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 22px;
 }
 
 .sidebar nav ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .sidebar nav ul li {
-  padding: 10px 0;
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 10px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .sidebar nav ul li:hover {
-  background: rgba(255, 255, 255, 0.1);
-  padding-left: 15px;
-  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .main {
-  flex-grow: 1;
-  padding: 20px;
+  margin-left: 240px;
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .top-nav {
@@ -56,38 +72,40 @@ body {
 }
 
 .top-nav input {
-  padding: 8px;
   width: 300px;
-  border-radius: 8px;
+  padding: 10px 15px;
   border: 1px solid #ccc;
+  border-radius: 19px;
 }
 
 .user-profile {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .user-profile img {
   width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
 .actions {
-  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .action-buttons button {
-  margin-left: 10px;
-  padding: 8px 16px;
-  background: #1976d2;
+  padding: 10px 16px;
+  margin-left: 12px;
+  background: #2196f3;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .action-buttons button:hover {
@@ -96,35 +114,61 @@ body {
 
 .content-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  margin-top: 30px;
+  grid-template-columns: 3fr 1fr;
+  gap: 24px;
+}
+
+.projects h3 {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
 }
 
-.projects .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+.card {
+  background: #fff;
+  border-left: 5px solid #f9a825;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
 }
 
-.card {
-  background: white;
-  border-left: 5px solid #f9a825;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+.card:hover {
+  transform: translateY(-4px);
 }
 
 .card h4 {
   margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.sidebar-widgets .widget {
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.sidebar-widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.widget {
   background: white;
-  padding: 15px;
-  margin-bottom: 20px;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.widget h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .widget ul {
@@ -133,5 +177,7 @@ body {
 }
 
 .widget li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #444;
 }
